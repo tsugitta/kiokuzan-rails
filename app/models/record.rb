@@ -35,7 +35,7 @@ class Record < ActiveRecord::Base
     if best_record = Record.where(identity: identity, type: type)
              .find_by('score <= ?', score)
       errors.add(:best_score,
-        "Your #{best_record.get_time_score} (rank: #{best_record.get_ranking}/#{Record.count_all(self.type)}) (#{best_record.created_date}) is faster than this.\nThe score will be kept for a week.")
+        "Your #{best_record.get_time_score} (rank: #{best_record.get_ranking}/#{Record.count_all(self.type)}) (#{best_record.created_at.strftime("%-m/%-d")}) is faster than this.\nThe score will be kept for a week.")
     end
   end
 

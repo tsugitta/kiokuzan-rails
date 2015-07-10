@@ -18,7 +18,6 @@ class RecordsController < ApplicationController
 
   private
   def record_params
-    params[:created_date] = Date.today.strftime("%-m/%-d")
-    params.permit(:name, :score, :identity, :hash_value, :type, :created_date)
+    params.permit(:name, :score, :identity, :hash_value, :type)
   end
 end
