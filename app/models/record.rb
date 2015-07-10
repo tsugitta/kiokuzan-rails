@@ -5,9 +5,14 @@ class Record < ActiveRecord::Base
   after_create :remove_past_record
 
   scope :rank_order, -> { order(score: :asc) }
+  scope :old_records, -> { where('created_at < ?', Date.today - 7) }
 
   def self.count_all(type)
     Record.where(type: type).count
+  end
+
+  def self.delete_old_records
+    Record.old_records.destroy_all
   end
 
   def has_all_columns?
