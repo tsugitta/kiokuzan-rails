@@ -1,0 +1,3 @@
+class ThreeBackRecord < Record
+
+end

@@ -1,0 +1,3 @@
+class TenBackRecord < Record
+
+end

@@ -1,0 +1,3 @@
+class FiveBackRecord < Record
+
+end

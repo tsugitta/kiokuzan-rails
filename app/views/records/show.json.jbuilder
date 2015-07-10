@@ -1,0 +1,1 @@
+json.extract! @record, :name, :score, :created_at
