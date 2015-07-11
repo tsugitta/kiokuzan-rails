@@ -50,5 +50,4 @@ test:
 production:
   <<: *default
   database: kiokuzan_rails_production
-  username: kiokuzan_rails
-  password: <%= ENV['KIOKUZAN_RAILS_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
