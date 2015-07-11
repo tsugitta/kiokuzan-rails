@@ -1,7 +1,4 @@
 class RecordsController < ApplicationController
-  def root
-  end
-
   def index
     @three_back_records = ThreeBackRecord.rank_order.limit(1000)
     @five_back_records = FiveBackRecord.rank_order.limit(1000)
