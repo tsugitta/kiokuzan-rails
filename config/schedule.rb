@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.day, at: '6:21 pm' do
+every 1.day, at: '0:00 am' do
   runner "Record.delete_old_records"
 end
