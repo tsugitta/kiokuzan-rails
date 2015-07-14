@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :output, {:error => 'log/error.log', :standard => 'log/cron.log'}
 
 every 1.day, at: '0:00 am' do
   runner "Record.delete_old_records"
