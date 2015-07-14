@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+env :PATH, '/home/ec2-user/.rbenv/shims/:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
 set :output, {:error => 'log/error.log', :standard => 'log/cron.log'}
 
 every 1.day, at: '0:00 am' do
